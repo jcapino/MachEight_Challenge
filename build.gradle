@@ -1,0 +1,45 @@
+plugins {
+    id 'application'
+}
+
+apply plugin: 'java'
+group 'org.macheight'
+version '1.0'
+
+ext {
+    javaMainClass = "com.macheight.challenge.FindPairsApplication.java"
+}
+
+application {
+    mainClass  = 'com.macheight.challenge.FindPairsApplication'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest{
+        attributes(
+                'Main-Class': 'com.macheight.challenge.FindPairsApplication'
+        )
+    }
+}
+
+run {
+    standardInput = System.in
+}
