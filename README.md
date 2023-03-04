@@ -6,4 +6,5 @@
 
 # How to Run?
 
-1. 
+1. From the root of the project, run the following command::
+> gradle clean build run
