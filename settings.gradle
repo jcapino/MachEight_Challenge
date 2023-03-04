@@ -1,0 +1,3 @@
+rootProject.name = 'MachEight_Challenge'
+include 'findPairs'
+
